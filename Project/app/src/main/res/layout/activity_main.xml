@@ -5,37 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_dark"
-    tools:context="vet.helloworld.MainActivity">
+    tools:context="vet.helloworld.MainActivity"
+    android:id="@+id/constraintLayout">
 
-    <TextView
-        android:id="@+id/textView"
+
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
+        android:text="@string/red"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
+    <Button
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="false"
-        android:onClick="onClick"
-        app:srcCompat="@drawable/vitaliev_pic"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="132dp" />
+        android:background="@color/yellowColor"
+        android:onClick="onYellowClick"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <EditText
-        android:id="@+id/editText"
+    <Button
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="340dp" />
-
+        android:text="Button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 </android.support.constraint.ConstraintLayout>
